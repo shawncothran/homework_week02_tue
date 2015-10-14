@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 40px;
+  font-family: 'Lato',sans-serif;
+}
+article {
+  width: 400px;
+  float: left;
+  margin: 0 20px;
+}
+section {
+  float: left;
+  position: relative;
+}
+section > img {
+  display: block;
+  padding: 30px 30px 93px 30px;
+  height: 448px;
+  width: 400px;
+  border: 3px solid #5CA4D7;
+}
+section > button {
+  display: block;
+  float: left;
+  height: 63px;
+  width: 80px;
+  border: 3px solid #5CA4D7;
+  color: #5CA4D7;
+  background: none;
+  font-size: 22px;
+}
+section > section {
+  position: absolute;
+  bottom: 0;
+  & > button:nth-child(2n+0) {
+    border-left: 0px solid #5CA4D7;
+    border-right: 0px solid #5CA4D7;
+  }
+}
+button {
+  padding: 16px 0;
+}
+
+.arrow_box {
+	position: relative;
+	background: #fff;
+	border: 3px solid #5CA4D7;
+  bottom: 174px;
+  right: 12px;
+  transition: 400ms;
+  width: 100px;
+  font-size: 40px;
+  opacity: 0;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #5CA4D7;
+	border-width: 12px;
+	margin-left: -12px;
+}
+section.info {
+  clear: both;
+  width: 100%;
+  padding: 0 5px;
+
+  h1, figure {
+    color: #5CA4D7;
+    margin: 18px 0;
+    font-size: 30px;
+  }
+  h1 {
+    font-weight: lighter;
+    float: left;
+  }
+  figure {
+    font-weight: 500;
+    float: right;
+  }
+}
+button:hover {
+  color: #fff;
+  background: #5CA4D7;
+  transition: 400ms;
+
+  .arrow_box {
+    display:block;
+    bottom: 145px;
+    color: #5CA4D7;
+    transition: 400ms;
+    opacity: 1;
+  }
+}
+.fa-square:nth-of-type(4n+2) {
+  color: #D583AC;
+}
+.fa-square:nth-of-type(4n+3) {
+  color: #F8D069;
+}
+.fa-square:nth-of-type(4n+4) {
+  color: #8BB992;
+}
+// button div.arrow_box:nth-of-type(2n+1) {
+//   width: 60px;
+// }
+.fa-square-o:nth-of-type(4n+1) {
+  font-size: 40px;
+}
+.fa-square-o:nth-of-type(4n+2) {
+  font-size: 32px;
+}
+.fa-square-o:nth-of-type(4n+3) {
+  font-size: 24px;
+}
+.fa-square-o:nth-of-type(4n+4) {
+  font-size: 16px;
+}
